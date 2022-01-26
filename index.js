@@ -24,11 +24,40 @@ function playRound(playerSelect) {
     playerPoints += 1
     document.getElementById("playerPoints").textContent = "Your points: " + playerPoints
   }
+  function hide (elements) {  //hides each input button by iterating through each element of the selected type, in this case the "input" type as defined in the below if statements
+    elements = elements.length ? elements : [elements]
+    for (var index = 0; index < elements.length; index++) {
+      elements[index].style.display = 'none'
+    }
+    
+  }
+  if (playerPoints > 4){
+    hide(document.querySelectorAll("input"))
+    document.getElementById("btn2").style.display = 'inline'
+  }
+  if (cpuPoints > 4){
+    hide(document.querySelectorAll("input"))
+    document.getElementById("btn2").style.display = 'inline'
+  }
+  
   cpuSelectText.textContent = "Computer picks: " + cpuSelect
 }
 
-document.querySelectorAll("input").forEach((button) => {
+document.querySelectorAll("input").forEach((button) => { //listens for each input button to be clicked and then calls the playRound function
   button.addEventListener("click", function () {
     playRound(button.value)
   })
 })
+
+function resetGame(){
+  document.getElementById("resetConfirm").textContent = "Resetting!"
+  setTimeout(function(){
+    document.location.reload()
+  }, 1000)
+  
+}
+
+
+
+
+

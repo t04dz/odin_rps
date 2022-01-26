@@ -9,14 +9,18 @@
 </head>
 <body>
     <h1>Rock Paper Scissors</h1>
-    <p id="cpuSelectText"></p>
+    <div class = "text">
+    <p id="cpuSelectText">Computer Picks: </p>
     <p id="winOrLose"> </p>
     <p id="playerPoints">Your points: </p>
     <p id="cpuPoints">CPU Points: </p>
+</div>
+    <h3 id="resetConfirm"></h3>
     <div class="buttons">
-        <input type="button" value= Rock >
-        <input type="button" value= Paper >
-        <input type="button" value= Scissors >
+        <input class="btn" type="button" value= Rock >
+        <input class="btn" type="button" value= Paper >
+        <input class="btn" type="button" value= Scissors >
+        <button id="btn2" onclick="resetGame()">Reset</button>
     </div>
     <script src="index.js"></script>
 </body>
