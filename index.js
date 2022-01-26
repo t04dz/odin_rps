@@ -12,6 +12,8 @@ function playRound(playerSelect){
             (playerSelect == "Paper" && cpuSelect == "Scissors") ||
             (playerSelect == "Scissors" && cpuSelect == "Rock")){
                 wolText.textContent = "You lose!"
+            } else if (playerSelect == cpuSelect){
+                wolText.textContent = "You tie!"
             }
     cpuSelectText.textContent = "Computer picks: " + cpuSelect 
     
