@@ -1,5 +1,7 @@
 let cpuSelectText = document.getElementById("cpuSelectText")
 let wolText = document.getElementById("winOrLose")
+let playerPoints = 0
+let cpuPoints = 0
 
 function cpuPlay() {
   let cpuChoices = ["Rock", "Paper", "Scissors"]
@@ -13,10 +15,14 @@ function playRound(playerSelect) {
     (playerSelect == "Scissors" && cpuSelect == "Rock")
   ) {
     wolText.textContent = "You lose!"
+    cpuPoints += 1
+    document.getElementById("cpuPoints").textContent = "CPU points: " + cpuPoints
   } else if (playerSelect == cpuSelect) {
-    wolText.textContent = "You tie!";
+    wolText.textContent = "You tie!"
   } else {
     wolText.textContent = "You win!"
+    playerPoints += 1
+    document.getElementById("playerPoints").textContent = "Your points: " + playerPoints
   }
   cpuSelectText.textContent = "Computer picks: " + cpuSelect
 }
