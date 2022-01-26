@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+input{
+    border: 0px;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+input:active{
+    background-color: grey;
+}
+
+.buttons{
+    display: flex;
+    gap: 10px;
+}
